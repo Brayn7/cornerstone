@@ -1,0 +1,16 @@
+.site-header {
+   border-bottom: 3px solid $cs-blue;
+   .menu-btn {
+      float: right;
+      a {
+         color: $cs-blue;
+         display: inline-block;
+         padding: 3px;
+         transition: transform .25s; 
+      }
+      a[aria-expanded="true"] {
+         transform: rotateZ(90deg);
+         transition: transform .25s;
+      }
+   }
+}

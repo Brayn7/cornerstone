@@ -119,9 +119,16 @@ add_action( 'widgets_init', 'cornerstone_widgets_init' );
 function cornerstone_scripts() {
 	wp_enqueue_style( 'cornerstone-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'cornerstone-jquery', get_template_directory_uri() . '../../../../node_modules/jquery/dist/jquery.min.js', array(), '20151215', true );
+
+
+	wp_enqueue_script( 'cornerstone-foundation', get_template_directory_uri() . '../../../../node_modules/foundation-sites/dist/js/foundation.min.js', array(), '20151215', true );
+
 	wp_enqueue_script( 'cornerstone-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'cornerstone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+		wp_enqueue_script( 'cornerstone-main', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

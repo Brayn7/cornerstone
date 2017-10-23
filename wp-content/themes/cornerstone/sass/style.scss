@@ -41,9 +41,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
---------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Foundation
+--------------------------------------------------------------*/
+@import "settings.scss";
+@import 'foundation';
+@include foundation-everything;
+
 
 /*--------------------------------------------------------------
 # Normalize
@@ -94,6 +104,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Content
 --------------------------------------------------------------*/
 @import "site/site";
+@import "site/primary/helpers";
+@import "site/primary/global";
+@import "site/primary/header";
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -104,3 +117,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+
+
