@@ -60,24 +60,27 @@
 //  55. Top Bar
 //  56. Xy Grid
 
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand:300,400,500');
+
 @import 'util/util';
 
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
+$global-font-size: 105%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1779ba,
+  primary: #0072C6,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
+
+$light-gray: #cccccc;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$dark-gray: #5d5d5d;
 $black: #333;
 $white: #fefefe;
 $body-background: $white;

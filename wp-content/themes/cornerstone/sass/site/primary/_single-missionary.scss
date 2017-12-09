@@ -1,0 +1,28 @@
+.missionary-single-content {
+   margin-top: 35px;
+
+   .media-links {
+      ul {
+         margin-bottom: 10px;
+      }
+      li {
+         display: inline-block;
+         &:after {
+            content: "|";
+            margin: 0 5px;
+         }
+         &:last-child:after {
+            content: none;
+         }
+      }
+   }
+
+   .donate {
+      .button {
+         width: 100%;
+         border-top-right-radius: 0;
+         border-top-left-radius: 0;
+         border: 1px solid $cs-blue;
+      }
+   }
+}

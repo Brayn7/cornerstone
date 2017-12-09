@@ -52,7 +52,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "settings.scss";
 @import 'foundation';
-@include foundation-everything;
+// @include foundation-everything;
+@include foundation-everything($prototype: true);
 
 
 /*--------------------------------------------------------------
@@ -100,13 +101,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "site/secondary/widgets";
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-@import "site/primary/helpers";
-@import "site/primary/global";
-@import "site/primary/header";
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -120,3 +114,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 
 
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+@import "site/primary/helpers";
+@import "site/primary/header";
+@import "site/primary/global";
+@import "site/primary/_splash-hero";
+@import "site/primary/_home";
+@import "site/primary/_single-missionary";

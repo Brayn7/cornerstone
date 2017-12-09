@@ -1,0 +1,25 @@
+a {
+   &:focus {
+      outline: none;
+   }
+   &:visited {
+      color: inherit;
+   }
+}
+
+hr {
+   height: 2px;
+   background: $cs-dk-gray;
+   margin-top: 0;
+   margin-bottom: 25px;
+}
+
+.button, input[type="submit"] {
+   font-family: Quicksand;
+   border-radius: 5px;
+}
+
+input[type="submit"] {
+   @include button;
+}
+

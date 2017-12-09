@@ -2,7 +2,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
+	// border: 1px solid;
 	border-color: $color__border-button;
 	border-radius: 3px;
 	background: $color__background-button;
@@ -20,3 +20,27 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.button:hover {
+	background: white;
+   color: $cs-blue;
+}
+
+a.button-invert:visited {
+   color: $cs-blue;
+}
+
+.button-invert {
+   color: $cs-blue;
+   background: white;
+   &:hover {
+   	background: $cs-blue;
+      color: white !important;
+   }
+}
+
+.read-on {
+   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
