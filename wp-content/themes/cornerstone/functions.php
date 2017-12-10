@@ -119,7 +119,7 @@ add_action( 'widgets_init', 'cornerstone_widgets_init' );
 function cornerstone_scripts() {
 	wp_enqueue_style( 'cornerstone-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'cornerstone-jquery', get_template_directory_uri() . 'js/jquery.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'cornerstone-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '20151215', true );
 
 
 	wp_enqueue_script( 'cornerstone-foundation', get_template_directory_uri() . '/js/foundation.min.js', array(), '20151215', true );
