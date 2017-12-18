@@ -49,7 +49,7 @@ if ($description || is_customize_preview()): ?>
 endif;?>
 				<div class="menu-btn title-bar-right d-inline-block">
 					<a data-toggle="offCanvas" aria-controls="primary-menu" aria-expanded="true">
-						<i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+						menu
 					</a>
 				</div>
 			</div><!-- .site-branding -->

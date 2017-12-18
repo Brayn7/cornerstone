@@ -5,14 +5,16 @@
    .menu-btn {
       float: right;
       a {
+         font-family: $heading__font__family;
          color: $cs-blue;
          display: inline-block;
          padding: 3px;
-         transition: transform .25s; 
+         // transition: transform .25s; 
       }
       a[aria-expanded="true"] {
-         transform: rotateZ(90deg);
-         transition: transform .25s;
+         // transform: rotateZ(90deg);
+         // transition: transform .25s;
+         color: $cs-dk-gray;
       }
    }
 }

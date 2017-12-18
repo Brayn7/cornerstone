@@ -25,6 +25,12 @@
         .section {
             padding: 7rem 0;
 
+            input[type="submit"] {
+                    color: white;
+                    background: $cs-blue;
+                    border-radius: 5px;
+            }
+
             &:nth-child(even) {
                 color: white;
                 background: $cs-blue;

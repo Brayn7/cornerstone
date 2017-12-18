@@ -13,13 +13,13 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer  section-container">
-		<div class="site-info section-inner">
+	<footer id="colophon" class="site-footer section-container grid-x  align-center">
+		<div class="site-info section-inner cell small-12 medium-8">
 			<div class="grid-container full section">
 				<div class="grid-container">
 					<div class="grid-x grid-padding-x grid-padding-y align-center text-center">
 						<?php if (!empty(get_theme_mod('footer_menu'))) { ?>
-							<div class="footer-cell cell small-12">
+							<div class="footer-cell cell small-12 margin-bottom-2">
 								<?php
 
 									$footer_nav = wp_nav_menu(array(

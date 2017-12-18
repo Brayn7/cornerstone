@@ -9,8 +9,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div id="primary" class="content-area grid-container">
+		<main id="main" class="site-main margin-top-3">
 
 		<?php
 		while ( have_posts() ) : the_post();

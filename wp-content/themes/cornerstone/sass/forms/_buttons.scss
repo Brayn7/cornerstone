@@ -6,7 +6,7 @@ input[type="submit"] {
 	border-color: $color__border-button;
 	border-radius: 3px;
 	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
+	// color: rgba(0, 0, 0, .8);
 	@include font-size(0.75);
 	line-height: 1;
 	padding: .6em 1em .4em;
@@ -21,7 +21,7 @@ input[type="submit"] {
 	}
 }
  a {
-  color: $color__text-main; 
+  // color: $color__text-main; 
 } 
 
 a.button {
