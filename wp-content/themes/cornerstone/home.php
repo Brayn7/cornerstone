@@ -48,7 +48,7 @@ $sections = new WP_query(array(
 $query = new WP_Query( array( 'meta_key' => '_is_ns_featured_post', 'meta_value' => 'yes' ) );
 
 $featured_missionaries = new WP_query(array(
-  'numberposts' => 3,
+  'posts_per_page' => 3,
   'post_type' => 'missionary',
   'meta_key' => '_is_ns_featured_post',
   'meta_value' => 'yes',
