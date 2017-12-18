@@ -10,3 +10,47 @@
    display: inline-block;
 }
 
+    .missionary {
+        color: white;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            color: white;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+        .post-content {
+            padding: 10px;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+
+            h4 {
+                margin: 0px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            p {
+                font-family: $heading__font__family;
+                text-transform: lowercase;
+                margin: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
+

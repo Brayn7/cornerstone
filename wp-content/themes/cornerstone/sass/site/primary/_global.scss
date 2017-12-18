@@ -17,9 +17,14 @@ hr {
 .button, input[type="submit"] {
    font-family: Quicksand;
    border-radius: 5px;
+   min-width: 150px;
 }
 
 input[type="submit"] {
    @include button;
+   margin-top: 25px;
 }
 
+span {
+   font-family: $heading__font__family;
+}

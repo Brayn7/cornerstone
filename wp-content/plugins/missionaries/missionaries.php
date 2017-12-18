@@ -35,6 +35,7 @@ function missionary_init() {
       'show_in_rest'      => true,
       'rest_base'         => 'missionary',
       'rest_controller_class' => 'WP_REST_Posts_Controller',
+      'taxonomies' => array('category')
    ) );
 }
 add_action( 'init', 'missionary_init' );

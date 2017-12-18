@@ -9,7 +9,7 @@
  * @package cornerstone
  */
 
-$logo = get_stylesheet_directory_uri() . "/img/_cs_logo_no_bg.png";
+$logo = get_theme_mod('menu_logo');
 
 ?>
 <!doctype html>

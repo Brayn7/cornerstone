@@ -163,4 +163,106 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// add settings to customizer
+
+function cornerstone_theme_customizer( $wp_customize ) {
+
+	$wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'hero_logo',
+           array(
+               'label'      => __( 'Upload a Hero Logo', 'cornerstone' ),
+               'section'    => 'header_image', 
+           )
+       )
+   );
+
+   $wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'menu_logo',
+           array(
+               'label'      => __( 'Upload a Menu Logo', 'cornerstone' ),
+               'section'    => 'title_tagline', 
+           )
+       )
+   );
+
+   $wp_customize->add_section( 'cornerstone_footer_section' , array(
+        'title'    => __( 'Footer Section', 'cornerstone' ),
+        'priority' => 30
+    ) );   
+
+
+   $menu_items = get_terms( 'nav_menu', array( 'hide_empty' => true ) );
+
+   $select_menu = [
+   	'NULL' => __('Select a Menu'),
+   ];
+   
+   foreach ($menu_items as $item) {
+		$select_menu[$item->term_id] = __($item->name);
+	}
+
+    $wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'footer_menu',
+        array(
+            'label'          => __( 'Footer Menu', 'cornerstone' ),
+            'section'        => 'cornerstone_footer_section',
+            'settings'       => 'footer_menu',
+            'type'           => 'select',
+            'choices'        => $select_menu,
+        )
+    )
+	);
+
+   $wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'text_section_1',
+        array(
+            'label'          => __( 'Text Section One', 'cornerstone' ),
+            'section'        => 'cornerstone_footer_section',
+            'settings'       => 'text_section_1',
+            'description'    => __('Here ( both textareas :0 ) you can enter HTML. You can also use font awesome icons Check out how  <a href="http://fontawesome.io/icons/">here</a>. Also you can use Foundation classes <a href="https://foundation.zurb.com/sites/docs/">See Here</a>.'),
+            'type'           => 'textarea',
+        )
+    )
+	);
+	
+	$wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'text_section_2',
+        array(
+            'label'          => __( 'Text Section Two', 'cornerstone' ),
+            'section'        => 'cornerstone_footer_section',
+            'settings'       => 'text_section_2',
+            'type'           => 'textarea',
+        )
+    )
+	); 
+
+		$wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'text_section_3',
+        array(
+            'label'          => __( 'Text Section Three', 'cornerstone' ),
+            'section'        => 'cornerstone_footer_section',
+            'settings'       => 'text_section_3',
+            'type'           => 'textarea',
+        )
+    )
+	); 
+
+}
+add_action( 'customize_register', 'cornerstone_theme_customizer' );
+
+// added settings in customizer.php
+
+
 

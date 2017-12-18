@@ -15,6 +15,13 @@ function cornerstone_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	$wp_customize->add_setting( 'hero_logo' );
+	$wp_customize->add_setting( 'menu_logo' );
+	$wp_customize->add_setting( 'footer_menu' );
+	$wp_customize->add_setting( 'text_section_1' );
+	$wp_customize->add_setting( 'text_section_2' );
+	$wp_customize->add_setting( 'text_section_3' );
+
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector'        => '.site-title a',
@@ -25,6 +32,9 @@ function cornerstone_customize_register( $wp_customize ) {
 			'render_callback' => 'cornerstone_customize_partial_blogdescription',
 		) );
 	}
+
+
+
 }
 add_action( 'customize_register', 'cornerstone_customize_register' );
 
@@ -53,3 +63,6 @@ function cornerstone_customize_preview_js() {
 	wp_enqueue_script( 'cornerstone-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'cornerstone_customize_preview_js' );
+
+
+

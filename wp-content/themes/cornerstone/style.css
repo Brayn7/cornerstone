@@ -572,7 +572,7 @@ textarea {
 .grid-container {
   padding-right: 0.59524rem;
   padding-left: 0.59524rem;
-  max-width: 71.42857rem;
+  max-width: 60.95238rem;
   margin: 0 auto; }
   @media print, screen and (min-width: 40em) {
     .grid-container {
@@ -2444,7 +2444,7 @@ a {
 
 hr {
   clear: both;
-  max-width: 71.42857rem;
+  max-width: 60.95238rem;
   height: 0;
   margin: 1.19048rem auto;
   border-top: 0;
@@ -5167,21 +5167,21 @@ html.is-reveal-open body {
   @media print, screen and (min-width: 40em) {
     .reveal {
       width: 600px;
-      max-width: 71.42857rem; } }
+      max-width: 60.95238rem; } }
   .reveal.collapse {
     padding: 0; }
   @media print, screen and (min-width: 40em) {
     .reveal.tiny {
       width: 30%;
-      max-width: 71.42857rem; } }
+      max-width: 60.95238rem; } }
   @media print, screen and (min-width: 40em) {
     .reveal.small {
       width: 50%;
-      max-width: 71.42857rem; } }
+      max-width: 60.95238rem; } }
   @media print, screen and (min-width: 40em) {
     .reveal.large {
       width: 90%;
-      max-width: 71.42857rem; } }
+      max-width: 60.95238rem; } }
   .reveal.full {
     top: 0;
     left: 0;
@@ -9374,11 +9374,6 @@ input[type="submit"] {
   font-size: 0.75rem;
   line-height: 1;
   padding: .6em 1em .4em; }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -9388,19 +9383,29 @@ input[type="submit"] {
   input[type="submit"]:focus {
     border-color: #aaa #bbb #bbb; }
 
-.button:hover {
+a {
+  color: #404040; }
+
+a.button {
+  color: white; }
+  a.button:visited {
+    color: white; }
+  a.button:hover {
+    color: #0072C6; }
+
+a.button:hover {
   background: white;
   color: #0072C6; }
 
 a.button-invert:visited {
   color: #0072C6; }
 
-.button-invert {
+a.button-invert {
   color: #0072C6;
   background: white; }
-  .button-invert:hover {
+  a.button-invert:hover {
     background: #0072C6;
-    color: white !important; }
+    color: white; }
 
 .read-on {
   -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
@@ -9425,7 +9430,9 @@ textarea {
   color: #666;
   border: 1px solid #ccc;
   border-radius: 3px;
-  padding: 3px; }
+  padding: 3px;
+  height: 60px;
+  text-align: center; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -9450,23 +9457,19 @@ select {
 textarea {
   width: 100%; }
 
+form, textarea {
+  font-family: "Quicksand", Helvetica, Roboto, Arial, sans-serif; }
+  form p, textarea p {
+    margin: 0; }
+  form iframe .rc-anchor-light, textarea iframe .rc-anchor-light {
+    background: transparent !important; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -9801,6 +9804,38 @@ object {
 .d-inline-block {
   display: inline-block; }
 
+.missionary {
+  color: white;
+  position: relative;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: top center; }
+  .missionary img {
+    width: 100%; }
+  .missionary a {
+    color: white; }
+    .missionary a:hover {
+      color: white; }
+  .missionary .post-content {
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4); }
+    .missionary .post-content h4 {
+      margin: 0px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
+    .missionary .post-content p {
+      font-family: "Quicksand", Helvetica, Roboto, Arial, sans-serif;
+      text-transform: lowercase;
+      margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
+
 .site-header {
   border-bottom: 3px solid #0072C6;
   background: white; }
@@ -9840,7 +9875,8 @@ hr {
 
 .button, input[type="submit"] {
   font-family: Quicksand;
-  border-radius: 5px; }
+  border-radius: 5px;
+  min-width: 150px; }
 
 input[type="submit"] {
   display: inline-block;
@@ -9859,12 +9895,16 @@ input[type="submit"] {
   text-align: center;
   cursor: pointer;
   background-color: #0072C6;
-  color: #fefefe; }
+  color: #fefefe;
+  margin-top: 25px; }
   [data-whatinput='mouse'] input[type="submit"] {
     outline: 0; }
   input[type="submit"]:hover, input[type="submit"]:focus {
     background-color: #0061a8;
     color: #fefefe; }
+
+span {
+  font-family: "Quicksand", Helvetica, Roboto, Arial, sans-serif; }
 
 .splash-container .splash-inner {
   position: relative; }
@@ -9894,40 +9934,31 @@ input[type="submit"] {
       background: white;
       border-radius: 5px; }
 
-.section-container .missionary {
-  color: white;
-  position: relative;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: top center; }
-  .section-container .missionary img {
-    width: 100%; }
-  .section-container .missionary a {
-    color: white; }
-    .section-container .missionary a:hover {
-      color: white; }
-  .section-container .missionary .post-content {
-    padding: 10px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4); }
-    .section-container .missionary .post-content h4 {
-      margin-bottom: 0px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap; }
-    .section-container .missionary .post-content p {
-      font-family: "Quicksand", Helvetica, Roboto, Arial, sans-serif;
-      text-transform: lowercase;
-      margin: 0;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap; }
-
 .section-container .post-content {
   min-width: 50%; }
+
+.section-container form ::-webkit-input-placeholder {
+  text-align: center; }
+
+.section-container form :-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center; }
+
+.section-container form ::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center; }
+
+.section-container form :-ms-input-placeholder {
+  text-align: center; }
+
+.section-container form input[type='submit'] {
+  color: #0072C6;
+  height: auto; }
+
+.missionary-single .section {
+  margin-bottom: 75px; }
+  .missionary-single .section:last-child {
+    margin: 0; }
 
 .missionary-single-content {
   margin-top: 35px; }
@@ -9945,3 +9976,13 @@ input[type="submit"] {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     border: 1px solid #0072C6; }
+
+.missionary-blog-posts h2 {
+  margin-top: 0; }
+
+footer.section-container {
+  font-family: "Quicksand", Helvetica, Roboto, Arial, sans-serif; }
+  footer.section-container .section-inner .section {
+    padding: 80px 0 20px; }
+  footer.section-container ul {
+    font-size: 1.2rem; }

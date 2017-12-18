@@ -13,17 +13,41 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cornerstone' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cornerstone' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'cornerstone' ), 'cornerstone', '<a href="http://brayn7.github.io">Robert Bryan</a>' );
-			?>
+	<footer id="colophon" class="site-footer  section-container">
+		<div class="site-info section-inner">
+			<div class="grid-container full section">
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x grid-padding-y align-center text-center">
+						<?php if (!empty(get_theme_mod('footer_menu'))) { ?>
+							<div class="footer-cell cell small-12">
+								<?php
+
+									$footer_nav = wp_nav_menu(array(
+										'menu' => get_theme_mod('footer_menu'),
+									));
+
+								?>
+							</div>
+						<?php } ?>
+						<?php if (!empty(get_theme_mod('text_section_1'))) { ?>
+							<div class="footer-cell cell small-12">
+								<?= get_theme_mod('text_section_1') ?>
+							</div>
+						<?php } ?>
+						<?php if (!empty(get_theme_mod('text_section_2'))) { ?>
+							<div class="footer-cell cell small-12">
+								<?= get_theme_mod('text_section_2') ?>
+							</div>
+						<?php } ?>
+						<?php if (!empty(get_theme_mod('text_section_3'))) { ?>
+							<div class="footer-cell cell small-12">
+								<?= get_theme_mod('text_section_3'); ?>
+							</div>
+						<?php } ?>
+			
+					</div>
+				</div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

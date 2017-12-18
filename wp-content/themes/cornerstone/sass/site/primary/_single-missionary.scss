@@ -1,6 +1,14 @@
+.missionary-single {
+   .section {
+      margin-bottom: 75px;
+      &:last-child {
+         margin: 0;
+      }
+   }
+}
 .missionary-single-content {
    margin-top: 35px;
-
+   
    .media-links {
       ul {
          margin-bottom: 10px;
@@ -24,5 +32,11 @@
          border-top-left-radius: 0;
          border: 1px solid $cs-blue;
       }
+   }
+
+}
+.missionary-blog-posts {
+   h2 {
+      margin-top: 0; 
    }
 }

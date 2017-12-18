@@ -12,7 +12,7 @@ input[type="submit"] {
 	padding: .6em 1em .4em;
 
 	&:hover {
-		border-color: $color__border-button-hover;
+		// border-color: $color__border-button-hover;
 	}
 
 	&:active,
@@ -20,22 +20,37 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+ a {
+  color: $color__text-main; 
+} 
 
-.button:hover {
+a.button {
+   color: white;
+   &:visited {
+      color: white;
+   }
+   &:hover {
+      color: $cs-blue;
+   }
+}
+
+a.button:hover {
 	background: white;
    color: $cs-blue;
 }
+
+
 
 a.button-invert:visited {
    color: $cs-blue;
 }
 
-.button-invert {
+a.button-invert {
    color: $cs-blue;
    background: white;
    &:hover {
    	background: $cs-blue;
-      color: white !important;
+      color: white;
    }
 }
 

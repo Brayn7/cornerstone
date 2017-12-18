@@ -18,7 +18,8 @@ get_header();?>
 
    <div id="primary" class="content-area grid-container full">
       <main id="main" class="site-main">
-
+      
+      <?php if (!empty(get_header_image())){ ?>
       <div class="splash-container">
         <div class="splash-inner">
 
@@ -27,9 +28,13 @@ get_header();?>
                 echo "<div class='hero-img' style='background-image: url(" . get_header_image() . ")'></div>";
               }
             ?>
-            <img class="splash-logo" src="<?php echo get_template_directory_uri(); ?>/img/_cs_logo_gray_letters_no_bg.png" alt="">
+
+            <?php if (!empty(get_theme_mod('hero_logo'))) { ?>     
+            <img class="splash-logo" src="<?php echo get_theme_mod('hero_logo'); ?>" alt="">
+            <?php } ?>
         </div>
       </div>
+      <?php } ?>
 
 <?php
 
@@ -68,7 +73,7 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
                 <h1 class="post-title large-h1"><?=esc_html($section->post_title);?></h1>
                 <div class="post-content padding-bottom-2">
 
-                  <?php if ($section->ID === 104) { ?>
+                  <?php if ($section->ID === 104 || $section->title == "Missionaries") { ?>
                   <div class="grid-container">
                     <div class="grid-x grid-margin-x grid-margin-y align-center">
                       <?php foreach ($featured_missionaries->posts as $missionary) { ?>
@@ -113,5 +118,4 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
    </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
