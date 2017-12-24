@@ -1,30 +1,78 @@
 a {
-   &:focus {
-      outline: none;
-   }
-   &:visited {
-      // color: inherit;
-   }
+    &:focus {
+        outline: none;
+    }
+
+    &:visited {
+        // color: inherit;
+   
+    }
 }
 
 hr {
-   height: 2px;
-   background: $cs-dk-gray;
-   margin-top: 0;
-   margin-bottom: 25px;
+    height: 2px;
+    background: $cs-dk-gray;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 .button, input[type="submit"] {
-   font-family: Quicksand;
-   border-radius: 5px;
-   min-width: 150px;
+    font-family: Quicksand;
+    border-radius: 5px;
+    min-width: 150px;
 }
 
 input[type="submit"] {
-   @include button;
-   margin-top: 25px;
+    @include button;
+
+    margin-top: 25px;
 }
 
 span {
-   font-family: $heading__font__family;
+    font-family: $heading__font__family;
 }
+
+.missionary {
+    color: white;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .post-content {
+        padding: 10px;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+
+        h4 {
+            margin: 0px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        p {
+            font-family: $heading__font__family;
+            text-transform: lowercase;
+            margin: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+}
+

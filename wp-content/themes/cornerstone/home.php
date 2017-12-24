@@ -54,6 +54,13 @@ $featured_missionaries = new WP_query(array(
   'meta_value' => 'yes',
 ));
 
+$featured_stories = new WP_query(array(
+  'posts_per_page' => 3,
+  'post_type' => 'post',
+  'meta_key' => '_is_ns_featured_post',
+  'meta_value' => 'yes',
+));
+
 echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>';
 ?>
 
@@ -61,7 +68,7 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
     <div class="section-inner">
       <?php
         $section_id = 1; 
-        $full_width_keys = array(104);
+        $full_width_keys = array(104, 197, "Missionaries", "Stories");
         foreach ($sections->posts as $section) {
         $class = (in_array($section->ID, $full_width_keys) ? "" : "medium-8");  
       ?>
@@ -93,6 +100,27 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
                       <?php } ?>
                     </div>
                   </div>
+
+                  <?php } elseif ($section->ID === 197 || $section->title == "Stories") { ?>
+                    <div class="grid-container">
+                      <div class="grid-x grid-margin-x grid-margin-y align-center">
+                        <?php foreach ($featured_stories->posts as $story) { ?>
+                          <div class="cell small-10 medium-4">
+                              <div class="story">
+                                <a href="<?= get_post_permalink($story->ID); ?>">  
+                                  <img src="<?=get_the_post_thumbnail_url($story->ID); ?>" alt="story-img">
+                                  <div class="post-content text-center">
+                                    <h3><?= $story->post_title; ?></h4>
+                                    <p><?= $story->post_excerpt; ?></p>
+                                  </div>
+                                </a>
+                              </div>
+                            
+
+                           </div>
+                        <?php } ?>
+                      </div>
+                    </div>
 
                   <?php } else { ?>
                   <?=do_shortcode($section->post_excerpt);?>
