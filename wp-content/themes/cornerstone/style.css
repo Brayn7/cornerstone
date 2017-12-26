@@ -9887,6 +9887,9 @@ span {
       overflow: hidden;
       white-space: nowrap; }
 
+.grecaptcha-badge {
+  display: none !important; }
+
 .splash-container .splash-inner {
   position: relative; }
 
