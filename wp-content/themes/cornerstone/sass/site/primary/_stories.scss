@@ -1,5 +1,14 @@
 .story {
-   a {
-      color: $color__text-main;
-   }
+    a {
+        color: $color__text-main;
+    }
+}
+
+.stories {
+    .post-img {
+        width: 300px;
+        height: 300px;
+        background-position: center top;
+        background-size: cover;
+    }
 }

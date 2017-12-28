@@ -110,13 +110,11 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
                                 <a href="<?= get_post_permalink($story->ID); ?>">  
                                   <img src="<?=get_the_post_thumbnail_url($story->ID); ?>" alt="story-img">
                                   <div class="post-content text-center">
-                                    <h3><?= $story->post_title; ?></h4>
+                                    <h3><?= $story->post_title; ?></h3>
                                     <p><?= $story->post_excerpt; ?></p>
                                   </div>
                                 </a>
                               </div>
-                            
-
                            </div>
                         <?php } ?>
                       </div>

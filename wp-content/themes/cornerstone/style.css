@@ -9946,6 +9946,13 @@ span {
 .story a {
   color: #404040; }
 
+.stories .post-img {
+  width: 300px;
+  height: 300px;
+  background-position: center top;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
 .missionary-single .section {
   margin-bottom: 75px; }
   .missionary-single .section:last-child {
