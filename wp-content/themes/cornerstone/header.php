@@ -18,9 +18,9 @@ $logo = get_theme_mod('menu_logo');
 	<meta charset="<?php bloginfo('charset');?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
-	<?php wp_head();?>
+	<script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<?php wp_head();?>
 </head>
 
 <body <?php body_class();?>>
