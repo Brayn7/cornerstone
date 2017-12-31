@@ -6902,7 +6902,7 @@ h4 {
 small, .font_small {
   font-size: 0.75em; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Quicksand", Helvetica, Roboto, Arial, sans-serif;
   clear: both; }
 
@@ -9813,8 +9813,10 @@ object {
     .site-header .menu-btn a[aria-expanded="true"] {
       color: #5d5d5d; }
 
-a:focus {
-  outline: none; }
+a {
+  color: #5d5d5d; }
+  a:focus {
+    outline: none; }
 
 hr {
   height: 2px;
@@ -9896,6 +9898,7 @@ span {
 .splash-container .hero-img {
   -webkit-background-size: cover;
           background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
   width: 100%;
   height: 90vh; }
@@ -9960,20 +9963,45 @@ span {
 
 .missionary-single-content {
   margin-top: 35px; }
+  .missionary-single-content .post-img {
+    margin: auto; }
   .missionary-single-content .media-links ul {
     margin-bottom: 10px; }
   .missionary-single-content .media-links li {
-    display: inline-block; }
+    display: inline-block;
+    font-weight: 400;
+    font-size: .95rem; }
     .missionary-single-content .media-links li:after {
       content: "|";
       margin: 0 5px; }
     .missionary-single-content .media-links li:last-child:after {
       content: none; }
-  .missionary-single-content .donate .button {
+  .missionary-single-content .media-links form input {
+    font-size: .95rem;
+    margin: 0;
+    background: none;
+    color: #5d5d5d;
+    display: block;
+    padding: 0;
+    min-width: 0;
+    font-weight: 400; }
+    .missionary-single-content .media-links form input:focus {
+      outline: none; }
+  @media screen and (max-width: 26.25em) {
+    .missionary-single-content .media-links li, .missionary-single-content .media-links form input {
+      font-size: .8rem; } }
+  .missionary-single-content .donate form {
+    width: 100%; }
+  .missionary-single-content .donate input {
+    margin: 0;
     width: 100%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     border: 1px solid #0072C6; }
+    .missionary-single-content .donate input:focus {
+      outline: none; }
 
 .missionary-blog-posts h2 {
   margin-top: 0; }

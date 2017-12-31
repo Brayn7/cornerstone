@@ -9,15 +9,16 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area grid-container">
-		<main id="main" class="site-main margin-top-3">
+
+	<div id="primary" class="content-area grid-container grid-x align-center">
+		<main id="main" class="site-main  cell small-12 margin-top-3">
 
 		<?php
 		while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation();
+			// the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -31,5 +32,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

@@ -84,13 +84,21 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
                   <div class="grid-container">
                     <div class="grid-x grid-margin-x grid-margin-y align-center">
                       <?php foreach ($featured_missionaries->posts as $missionary) { ?>
-                        <div class="cell small-10 medium-4">
+                        <div class="cell small-12 medium-4">
                             <div class="missionary">
                               <a href="<?= get_post_permalink($missionary->ID); ?>">  
                                 <img src="<?=get_field('missionary_image', $missionary->ID)['url'] ?>" alt="missionary-img">
                                 <div class="post-content text-center">
                                   <h4><?= $missionary->post_title; ?></h4>
-                                  <p><?= get_field('project_name', $missionary->ID); ?>: <span><?= get_field('region', $missionary->ID); ?></span></p>
+                                  <?php 
+                                    $project_name = get_field('project_name', $missionary->ID);
+                                    $region = get_field('region', $missionary->ID);
+                                    $one = !empty($project_name) || !empty($region) ? true : false;
+                                    $both = !empty($project_name) && !empty($region) ? true : false;
+                                   ?>
+                                   <?php if ($one) { ?>
+                                  <p><?= !empty($project_name) ? $project_name : null; ?><?php $both ? ": " : null; ?> <span><?= $region ? $region : null; ?></span></p>
+                                  <?php } ?>
                                 </div>
                               </a>
                             </div>
@@ -105,7 +113,7 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
                     <div class="grid-container">
                       <div class="grid-x grid-margin-x grid-margin-y align-center">
                         <?php foreach ($featured_stories->posts as $story) { ?>
-                          <div class="cell small-10 medium-4">
+                          <div class="cell small-12 medium-4">
                               <div class="story">
                                 <a href="<?= get_post_permalink($story->ID); ?>">  
                                   <img src="<?=get_the_post_thumbnail_url($story->ID); ?>" alt="story-img">

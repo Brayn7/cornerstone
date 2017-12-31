@@ -14,8 +14,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div id="primary" class="content-area grid-container grid-x align-center">
+		<main id="main" class="site-main  cell small-12 margin-top-3">
 
 		<?php
 		if ( have_posts() ) :
@@ -40,7 +40,7 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			// the_posts_navigation();
 
 		else :
 
