@@ -27,9 +27,15 @@
             padding: 7rem 0;
 
             input[type="submit"] {
-                    color: white;
-                    background: $cs-blue;
-                    border-radius: 5px;
+                color: white;
+                background: $cs-blue;
+                border-radius: 5px;
+            }
+
+            &:nth-child(odd) {
+                a .post-content {
+                    color: $cs-dk-gray;
+                }
             }
 
             &:nth-child(even) {
@@ -71,7 +77,6 @@
         input[type='submit'] {
             color: $cs-blue;
             height: auto;
-
         }
     }
 }

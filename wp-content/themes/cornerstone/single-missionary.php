@@ -51,14 +51,14 @@ get_header(); ?>
                      echo "<li><a class='no-swipebox' href=" . $value . ">". $item ."</a></li>";
                   }
                } ?>
-               <li><?= missionary_donate($name); ?></li>
+               <li><?= single_purpose_donate($name); ?></li>
             </ul>
          </div>
          <hr class="hide-for-small cell small-12">
          <div class="post-img cell small-12  medium-5 large-4 medium-order-2 margin-bottom-2">
             <img src="<?= $img; ?>" alt="missionary-img">
             <div class="donate">
-               <?= missionary_donate($name); ?>
+               <?= single_purpose_donate($name); ?>
             </div>
          </div>
          <div class="post-content cell small-12  medium-7 large-8  medium-order-1">
@@ -101,9 +101,16 @@ get_header(); ?>
       <?php $gallery = acf_photo_gallery('photo_gallery', $current_id);?>
       <?php if (count($gallery)) { ?>
          <div class="section missionary-media cell small-12 text-center">
-         <h1>Gallery</h1>
+         <h1 class="text-left">Media</h1>
          <hr class="hide-for-small cell small-12">
             <div class="grid-x grid-padding-x grid-padding-y">
+               <?php if (!empty(get_field('video_playlist', $current_id))){ ?>
+                  <div class="video-playlist cell small-12">
+                     <?php 
+                        echo do_shortcode("'".get_field("video_playlist", $current_id)."'");
+                     ?>
+                  </div>
+               <?php } ?>
                <?php foreach ($gallery as $img) { ?>
                <?php 
                   $full_image_url= $img['full_image_url'];

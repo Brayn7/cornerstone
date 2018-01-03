@@ -9892,6 +9892,23 @@ span {
 .grecaptcha-badge {
   display: none !important; }
 
+.video-playlist {
+  font-family: "Quicksand", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 300; }
+  .video-playlist .main-playlist {
+    max-width: 100%; }
+    .video-playlist .main-playlist .vid-thumb-title {
+      font-weight: normal !important; }
+  .video-playlist .main-playlist, .video-playlist .video-wrapper, .video-playlist .playlist-scroll, .video-playlist .playlist-thumbs {
+    height: 100% !important;
+    max-height: 100% !important; }
+  .video-playlist .playlist-scroll {
+    max-height: 350px !important;
+    overflow: scroll; }
+
+.elementor-column-wrap.elementor-element-populated {
+  padding: 0 !important; }
+
 .splash-container .splash-inner {
   position: relative; }
 
@@ -9917,6 +9934,8 @@ span {
     color: white;
     background: #0072C6;
     border-radius: 5px; }
+  .section-container .section-inner .section:nth-child(odd) a .post-content {
+    color: #5d5d5d; }
   .section-container .section-inner .section:nth-child(even) {
     color: white;
     background: #0072C6; }

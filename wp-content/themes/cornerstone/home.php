@@ -61,7 +61,6 @@ $featured_stories = new WP_query(array(
   'meta_value' => 'yes',
 ));
 
-echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>';
 ?>
 
   <div class="section-container">
@@ -72,6 +71,13 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
         foreach ($sections->posts as $section) {
         $class = (in_array($section->ID, $full_width_keys) ? "" : "medium-8");  
       ?>
+       <?php if (get_field('body_on_front',$section->ID)) { ?>
+          <?php 
+            $content = $section->post_content;
+
+            echo \Elementor\Plugin::$instance->frontend->get_builder_content( $section->ID);
+           ?>
+      <?php } else { ?>
         <div id="section-<?=$section_id;?>" class="grid-container full section">
           <div class="grid-container section-content">
             <!-- start grid-x  -->
@@ -79,8 +85,8 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
               <div class="cell small-12 <?= $class; ?> text-center">   
                 <h1 class="post-title large-h1"><?=esc_html($section->post_title);?></h1>
                 <div class="post-content padding-bottom-2">
-
-                  <?php if ($section->ID === 104 || $section->title == "Missionaries") { ?>
+                  <?php if (get_page_template_slug( $section->ID ) == 'missionaries.php'
+) { ?>
                   <div class="grid-container">
                     <div class="grid-x grid-margin-x grid-margin-y align-center">
                       <?php foreach ($featured_missionaries->posts as $missionary) { ?>
@@ -109,7 +115,7 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
                     </div>
                   </div>
 
-                  <?php } elseif ($section->ID === 197 || $section->title == "Stories") { ?>
+                  <?php } elseif (get_page_template_slug( $section->ID ) == 'stories.php') { ?>
                     <div class="grid-container">
                       <div class="grid-x grid-margin-x grid-margin-y align-center">
                         <?php foreach ($featured_stories->posts as $story) { ?>
@@ -142,6 +148,7 @@ echo '<script> console.log(' . json_encode($featured_missionaries) . ')</script>
             <!-- end grid-x -->
           </div>
         </div>
+        <?php } ?>
         <?php $section_id++; ?>
       <?php }?>
     </div>

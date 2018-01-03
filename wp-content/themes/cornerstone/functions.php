@@ -266,7 +266,7 @@ add_action( 'customize_register', 'cornerstone_theme_customizer' );
 
 // Donate
 
-function missionary_donate ($purpose){
+function single_purpose_donate ($purpose){
    echo '<form class="paypal_form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
            <input name="cmd" type="hidden" value="_donations">
            <input name="business" type="hidden" value="carla@cornerstoneinternational.org">
@@ -274,6 +274,10 @@ function missionary_donate ($purpose){
            <input name="currency_code" type="hidden" value="USD">
            <input class="paypal_btn" title="paypal" alt="'. $purpose .'" name="submit" value="donate" type="submit">
          </form>';
+}
+
+function donate_select(){
+   
 }
 
 

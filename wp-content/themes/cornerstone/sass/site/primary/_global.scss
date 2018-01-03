@@ -81,3 +81,28 @@ span {
     display: none !important;
 }
 
+.video-playlist {
+    font-family: $heading__font__family;
+    font-weight: 300;
+    .main-playlist {
+        max-width: 100%;
+
+        .vid-thumb-title {
+            font-weight: normal !important;
+        }
+    }
+
+    .main-playlist, .video-wrapper, .playlist-scroll, .playlist-thumbs {
+        height: 100% !important;
+        max-height: 100% !important;
+    }
+    .playlist-scroll {
+        max-height: 350px !important;
+        overflow: scroll;
+    }
+}
+
+.elementor-column-wrap.elementor-element-populated {
+    padding: 0 !important;
+}
+
