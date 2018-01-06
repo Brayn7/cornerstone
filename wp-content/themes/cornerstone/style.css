@@ -9928,6 +9928,10 @@ span {
   right: 0;
   margin: auto; }
 
+.section-container .paypal_form {
+  max-width: 750px;
+  margin: auto; }
+
 .section-container .section-inner .section {
   padding: 7rem 0; }
   .section-container .section-inner .section input[type="submit"] {

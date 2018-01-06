@@ -29,6 +29,7 @@ get_header();?>
               }
             ?>
 
+
             <?php if (!empty(get_theme_mod('hero_logo'))) { ?>     
             <img class="splash-logo" src="<?php echo get_theme_mod('hero_logo'); ?>" alt="">
             <?php } ?>
@@ -64,6 +65,7 @@ $featured_stories = new WP_query(array(
 ?>
 
   <div class="section-container">
+
     <div class="section-inner">
       <?php
         $section_id = 1; 
@@ -75,7 +77,26 @@ $featured_stories = new WP_query(array(
           <?php 
             $content = $section->post_content;
 
-            echo \Elementor\Plugin::$instance->frontend->get_builder_content( $section->ID);
+            $elementor_content = \Elementor\Plugin::$instance->frontend->get_builder_content( $section->ID);
+
+            if (!empty($elementor_content)){
+              echo $elementor_content;
+            } else {
+              echo '<div id="section-<?=$section_id;?>" class="grid-container full section">
+                    <div class="grid-container section-content">
+                      <!-- start grid-x  -->
+                      <div class="grid-x grid-margin-x align-center">
+                        <div class="cell small-12 <?= $class; ?> text-center">   
+                          <h1 class="post-title large-h1">' .esc_html($section->post_title) .'</h1>
+                          <div class="post-content padding-bottom-2">
+                          '. do_shortcode($content) .'
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>';
+            }
+
            ?>
       <?php } else { ?>
         <div id="section-<?=$section_id;?>" class="grid-container full section">
