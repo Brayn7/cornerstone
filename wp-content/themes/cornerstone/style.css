@@ -9930,7 +9930,8 @@ span {
 
 .section-container .paypal_form {
   max-width: 750px;
-  margin: auto; }
+  margin: auto;
+  margin-top: 25px; }
 
 .section-container .section-inner .section {
   padding: 7rem 0; }
