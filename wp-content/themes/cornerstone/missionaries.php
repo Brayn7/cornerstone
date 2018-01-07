@@ -14,6 +14,21 @@ get_header(); ?>
       <h1 class="margin-top-3"><?= the_title(); ?></h1>
       <hr class="hide-for-small cell small-12">
       <div class="grid-container">
+        <?php
+
+          $content_post = get_post(get_the_id());
+          $content = $content_post->post_content;
+          $content = apply_filters('the_content', $content);
+          $content = str_replace(']]>', ']]&gt;', $content);
+
+          if (!empty($content)) {
+        ?>
+        <div class="grid-x grid-padding-x margin-bottom-3">
+          <div class="cell small-12">
+            <?= $content; ?>
+          </div>
+        </div>
+        <?php } ?>
          <?php 
             $missionaries = new WP_query(array(
               'numberposts' => -1,
@@ -21,6 +36,7 @@ get_header(); ?>
             ));
 
           ?>
+
 
         <div class="grid-x grid-margin-x grid-margin-y">
           <?php foreach ($missionaries->posts as $missionary) { ?>

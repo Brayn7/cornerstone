@@ -9900,11 +9900,12 @@ span {
     .video-playlist .main-playlist .vid-thumb-title {
       font-weight: normal !important; }
   .video-playlist .main-playlist, .video-playlist .video-wrapper, .video-playlist .playlist-scroll, .video-playlist .playlist-thumbs {
-    height: 100% !important;
+    background: #222222;
     max-height: 100% !important; }
   .video-playlist .playlist-scroll {
-    max-height: 350px !important;
     overflow: scroll; }
+  .video-playlist .playlist-container::after {
+    content: none; }
 
 .elementor-column-wrap.elementor-element-populated {
   padding: 0 !important; }
