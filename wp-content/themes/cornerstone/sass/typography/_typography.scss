@@ -38,6 +38,12 @@ h4 {font-size: 1.333em;}
 
 small, .font_small {font-size: 0.75em;}
 
+html {
+  @include breakpoint(small down ){
+    font-size: 1.0em;
+  }
+}
+
 @import "headings";
 
 @import "copy";

@@ -1,4 +1,5 @@
 <?php
+global $section_id;
 /**
  * The template for displaying the footer
  *
@@ -8,12 +9,12 @@
  *
  * @package cornerstone
  */
-
+$footer_bg = ($section_id % 2 !== 0) ? 'white-bg': 'blue-bg';
 ?>
 
 	</div><!-- #content -->
 	
-	<footer id="colophon" class="site-footer section-container grid-x  align-center <?= (is_home() || is_front_page() ? '' : 'margin-top-3');  ?>">
+	<footer id="colophon" class="<?= $footer_bg; ?> site-footer section-container grid-x  align-center <?= (is_home() || is_front_page() ? '' : 'margin-top-3');  ?>">
 		<div class="site-info section-inner cell small-12 medium-8">
 			<div class="grid-container full section">
 				<div class="grid-container">

@@ -1,3 +1,4 @@
+
 footer.section-container {
    font-family: $heading__font__family;
    background: $cs-blue;
@@ -19,5 +20,13 @@ footer.section-container {
    ul {
       font-size: 1.2rem;
       justify-content: center;
+   }
+}
+
+footer.section-container.white-bg {
+   background: white;
+   color: $cs-blue;
+   a {
+      color: $cs-blue;
    }
 }
