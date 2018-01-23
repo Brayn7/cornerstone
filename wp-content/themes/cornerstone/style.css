@@ -9870,9 +9870,9 @@ span {
   background-position: top center; }
   .missionary img {
     width: 100%; }
-  .missionary a {
+  .missionary a p, .missionary a h4 {
     color: white; }
-    .missionary a:hover {
+    .missionary a p:hover, .missionary a h4:hover {
       color: white; }
   .missionary .post-content {
     padding: 10px;
