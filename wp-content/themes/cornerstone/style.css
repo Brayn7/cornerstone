@@ -9949,6 +9949,8 @@ span {
   .section-container .section-inner .section:nth-child(even) {
     color: white;
     background: #0072C6; }
+    .section-container .section-inner .section:nth-child(even) a .post-content {
+      color: white; }
     .section-container .section-inner .section:nth-child(even) input[type="submit"] {
       color: #0072C6;
       background: white;

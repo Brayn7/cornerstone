@@ -80,9 +80,12 @@ $featured_stories = new WP_query(array(
             $elementor_content = \Elementor\Plugin::$instance->frontend->get_builder_content( $section->ID);
 
             if (!empty($elementor_content)){
-              echo $elementor_content;
+
+              echo '<div id="section-'. $section_id .'">
+                        '. $elementor_content .'
+                    </div>';
             } else {
-              echo '<div id="section-<?=$section_id;?>" class="grid-container full section">
+              echo '<div id="section-' . $section_id . '"class="grid-container full section">
                     <div class="grid-container section-content">
                       <!-- start grid-x  -->
                       <div class="grid-x grid-margin-x align-center">

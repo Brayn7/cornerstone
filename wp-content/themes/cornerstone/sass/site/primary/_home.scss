@@ -47,6 +47,10 @@
                 color: white;
                 background: $cs-blue;
 
+                a .post-content {
+                    color: white;
+                }
+
                 input[type="submit"] {
                     color: $cs-blue;
                     background: white;
