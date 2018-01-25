@@ -31,7 +31,7 @@ get_header(); ?>
         <?php } ?>
          <?php 
             $missionaries = new WP_query(array(
-              'numberposts' => -1,
+              'posts_per_page' => -1,
               'post_type' => 'missionary',
             ));
 
