@@ -29,10 +29,15 @@
         display: flex;
         align-items: center;
 
+        select {
+            height: 42px;
+        }
+
         .paypal_btn {
             border-radius: 0 !important;
             margin: 0;
             height: 42px;
+            min-width: 80px;
             padding: 0px 0;
             box-shadow: none;
             outline: none;

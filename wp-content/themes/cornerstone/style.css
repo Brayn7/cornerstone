@@ -9945,10 +9945,13 @@ span {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  .section-container .paypal_form select {
+    height: 42px; }
   .section-container .paypal_form .paypal_btn {
     border-radius: 0 !important;
     margin: 0;
     height: 42px;
+    min-width: 80px;
     padding: 0px 0;
     -webkit-box-shadow: none;
             box-shadow: none;
