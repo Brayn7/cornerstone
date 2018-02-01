@@ -26,7 +26,19 @@
         max-width: 750px;
         margin: auto;
         margin-top: 25px;
+        display: flex;
+        align-items: center;
+
+        .paypal_btn {
+            border-radius: 0 !important;
+            margin: 0;
+            height: 42px;
+            padding: 0px 0;
+            box-shadow: none;
+            outline: none;
+        }
     }
+
     .section-inner {
         .section {
             padding: 7rem 0;

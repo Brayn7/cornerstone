@@ -42,8 +42,10 @@ get_header(); ?>
           <?php foreach ($missionaries->posts as $missionary) { ?>
             <div class="cell small-12 medium-4">
                 <div class="missionary">
+
                   <a href="<?= get_post_permalink($missionary->ID); ?>">  
-                    <img src="<?=get_field('missionary_image', $missionary->ID)['url'] ?>" alt="missionary-img">
+              
+                  <img src="<?=get_field('missionary_image', $missionary->ID)['url'] ?>" alt="missionary-img">
                     <div class="post-content text-center">
                       <h4><?= $missionary->post_title; ?></h4>
                       <?php 
