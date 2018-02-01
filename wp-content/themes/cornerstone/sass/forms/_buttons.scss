@@ -42,11 +42,11 @@ a.button:hover {
 
 
 a.button-invert:visited {
-   color: $cs-blue;
+   color: $cs-dk-gray;
 }
 
 a.button-invert {
-   color: $cs-blue;
+   color: $cs-dk-gray;
    background: white;
    &:hover {
    	background: $cs-blue;

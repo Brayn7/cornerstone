@@ -9398,10 +9398,10 @@ a.button:hover {
   color: #0072C6; }
 
 a.button-invert:visited {
-  color: #0072C6; }
+  color: #5d5d5d; }
 
 a.button-invert {
-  color: #0072C6;
+  color: #5d5d5d;
   background: white; }
   a.button-invert:hover {
     background: #0072C6;
