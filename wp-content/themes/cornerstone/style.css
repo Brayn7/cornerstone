@@ -9826,7 +9826,8 @@ form.paypal_form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  height: 55px; }
   form.paypal_form input {
     margin: 0;
     height: 54px; }
