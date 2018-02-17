@@ -17,13 +17,13 @@
   },
   "homepage": "https://github.com/Brayn7/cornerstone#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.6",
     "foundation-sites": "^6.4.3",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "jquery": "^3.2.1"
+    "jquery": "^3.3.1"
   },
   "dependencies": {}
 }

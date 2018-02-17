@@ -36,7 +36,9 @@ gulp.task('sass', function() {
 gulp.task('default', ['sass'], function() {
 
     browserSync.init({
-         proxy: 'cornerstone.dev',
+          server: {
+        baseDir: "./",
+    },
          port: 8000
     });
 

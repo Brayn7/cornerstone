@@ -102,7 +102,16 @@ $featured_stories = new WP_query(array(
 
            ?>
       <?php } else { ?>
-        <div id="section-<?=$section_id;?>" class="grid-container full section">
+        <div id="section-<?=$section_id;?>" class="grid-container full section" style='background-image: url("<?=get_field('background_image', $section->ID); ?>"); background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        '>
+          <?php 
+            if (!empty(get_field('background_image', $section->ID))){
+              echo '<div class="overlay"></div>';
+            } 
+          ?>
           <div class="grid-container section-content">
             <!-- start grid-x  -->
             <div class="grid-x grid-margin-x align-center">
