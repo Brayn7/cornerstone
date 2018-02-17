@@ -10,6 +10,13 @@ a {
     }
 }
 
+form.paypal_form {
+    display: flex;
+    input {
+        margin: 0;
+    }
+}
+
 hr {
     height: 2px;
     background: $cs-dk-gray;
