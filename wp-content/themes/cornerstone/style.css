@@ -9828,7 +9828,8 @@ form.paypal_form {
   display: -ms-flexbox;
   display: flex; }
   form.paypal_form input {
-    margin: 0; }
+    margin: 0;
+    height: 54px; }
 
 hr {
   height: 2px;
