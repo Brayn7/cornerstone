@@ -10012,7 +10012,7 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
     height: 100%;
     top: 0; }
   .section-container .section-inner .section .section-content {
-    z-index: 2;
+    z-index: 2000;
     position: relative; }
   .section-container .section-inner .section input[type="submit"] {
     color: white;
