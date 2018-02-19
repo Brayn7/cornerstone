@@ -9942,6 +9942,9 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
 
 #main .youtube_channel.default.responsive.ytc_display_iframe2 > div:not(:first-child) {
   width: 50% !important; }
+  @media screen and (max-width: 39.9375em) {
+    #main .youtube_channel.default.responsive.ytc_display_iframe2 > div:not(:first-child) {
+      width: 100% !important; } }
 
 #main .youtube_channel.default.responsive.ytc_display_iframe2 > div {
   margin-bottom: 1.5rem;
