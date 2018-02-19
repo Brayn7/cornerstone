@@ -1,5 +1,6 @@
 a {
     color: $cs-dk-gray;
+
     &:focus {
         outline: none;
     }
@@ -13,6 +14,8 @@ a {
 form.paypal_form {
     display: flex;
     height: 55px;
+    margin-bottom: 25px;
+
     input {
         margin: 0;
         height: 54px;
@@ -93,6 +96,7 @@ span {
 .video-playlist {
     font-family: $heading__font__family;
     font-weight: 300;
+
     .main-playlist {
         max-width: 100%;
 
@@ -103,9 +107,11 @@ span {
 
     .main-playlist, .video-wrapper, .playlist-scroll, .playlist-thumbs {
         background: #222222;
+
         // height: 100% !important;
         max-height: 100% !important;
     }
+
     .playlist-scroll {
         overflow: scroll;
     }
@@ -119,5 +125,30 @@ span {
     padding: 0 !important;
 }
 
+.no-padding-video-wrapper .elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline {
+    padding-bottom: 56.25%;
+}
 
+div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-wrapper, .fluid-width-video-wrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: 42.4% !important;
 
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
+    }
+}
+
+#main .youtube_channel.default.responsive.ytc_display_iframe2 > div:not(:first-child) {
+    width: 50% !important;
+}
+
+#main .youtube_channel.default.responsive.ytc_display_iframe2 > div {
+    margin-bottom:  1.5rem;
+    padding: 0 1rem;
+}

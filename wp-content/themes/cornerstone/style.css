@@ -9518,8 +9518,8 @@ form, textarea {
     float: left;
     position: relative;
     width: 100%; }
-    .main-navigation li:hover > a,
-    .main-navigation li.focus > a,
+    .main-navigation li > a:hover,
+    .main-navigation li > a:focus,
     .main-navigation li .current_page_item > a {
       color: white;
       background: #0072C6; }
@@ -9827,7 +9827,8 @@ form.paypal_form {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 55px; }
+  height: 55px;
+  margin-bottom: 25px; }
   form.paypal_form input {
     margin: 0;
     height: 54px; }
@@ -9923,6 +9924,28 @@ span {
 
 .elementor-column-wrap.elementor-element-populated {
   padding: 0 !important; }
+
+.no-padding-video-wrapper .elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline {
+  padding-bottom: 56.25%; }
+
+div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-wrapper, .fluid-width-video-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 42.4% !important; }
+  div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline iframe, .video-wrapper iframe, .fluid-width-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 0; }
+
+#main .youtube_channel.default.responsive.ytc_display_iframe2 > div:not(:first-child) {
+  width: 50% !important; }
+
+#main .youtube_channel.default.responsive.ytc_display_iframe2 > div {
+  margin-bottom: 1.5rem;
+  padding: 0 1rem; }
 
 .splash-container .splash-inner {
   position: relative; }

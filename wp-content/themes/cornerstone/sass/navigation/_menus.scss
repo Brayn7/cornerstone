@@ -79,8 +79,8 @@
 		position: relative;
 		width: 100%;
 
-		&:hover > a,
-		&.focus > a,
+		 > a:hover,
+		 > a:focus ,
 		.current_page_item > a {
 			color: white;
 			background: $cs-blue;
