@@ -49,14 +49,14 @@ $sections = new WP_query(array(
 $query = new WP_Query( array( 'meta_key' => '_is_ns_featured_post', 'meta_value' => 'yes' ) );
 
 $featured_missionaries = new WP_query(array(
-  'posts_per_page' => 3,
+  'posts_per_page' => 6,
   'post_type' => 'missionary',
   'meta_key' => '_is_ns_featured_post',
   'meta_value' => 'yes',
 ));
 
 $featured_stories = new WP_query(array(
-  'posts_per_page' => 3,
+  'posts_per_page' => 6,
   'post_type' => 'post',
   'meta_key' => '_is_ns_featured_post',
   'meta_value' => 'yes',
