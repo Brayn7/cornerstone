@@ -22,6 +22,11 @@ form.paypal_form {
     }
 }
 
+input.paypal_btn.button.read-on {
+    border-radius: 5px;
+    font-family: Quicksand;
+}
+
 hr {
     height: 2px;
     background: $cs-dk-gray;
