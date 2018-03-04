@@ -174,7 +174,7 @@ $featured_stories = new WP_query(array(
                   <?php } ?>
                 </div>
                 <?php if (!empty(get_field("more_info", $section->ID))) {?>
-                  <a class="read-on button<?= ($section_id % 3 === 0 || $section_id === 1 )? ' white-hover' : '' ?> <?= ($section_id % 2 === 0 || $bg !== 'blue-bg')? 'button-invert' : '' ?>" href="<?=get_post_permalink($section->ID);?>">
+                  <a class="read-on button<?= ($section_id % 3 === 0 || $section_id === 1 )? ' white-hover' : '' ?> <?= ($section_id % 2 === 0 && $bg !== 'blue-bg')? 'button-invert' : '' ?>" href="<?=get_post_permalink($section->ID);?>">
                     <?=get_field("more_info_text", $section->ID);?>
                   </a>
                 <?php }?>
