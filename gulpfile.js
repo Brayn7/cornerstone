@@ -35,12 +35,12 @@ gulp.task('sass', function() {
 
 gulp.task('default', ['sass'], function() {
 
-    browserSync.init({
-          server: {
-        baseDir: "./",
-    },
-         port: 8000
-    });
+    // browserSync.init({
+    //       server: {
+    //     baseDir: "./",
+    // },
+    //      port: 8000
+    // });
 
     gulp.watch("./wp-content/themes/cornerstone/sass/**/*.scss", ['sass']);
 });

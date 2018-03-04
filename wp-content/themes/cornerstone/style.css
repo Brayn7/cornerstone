@@ -9816,6 +9816,13 @@ object {
       padding: 3px; }
     .site-header .menu-btn a[aria-expanded="true"] {
       color: #5d5d5d; }
+  .site-header .menu-item-has-children .sub-menu {
+    height: 0; }
+  .site-header .menu-item-has-children:hover .sub-menu {
+    height: 100%;
+    -webkit-transition: 1sec;
+    -o-transition: 1sec;
+    transition: 1sec; }
 
 a {
   color: #5d5d5d; }
