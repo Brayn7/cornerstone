@@ -9873,6 +9873,10 @@ input[type="submit"] {
     background-color: #0061a8;
     color: #fefefe; }
 
+.blue-bg {
+  background: #0072C6;
+  color: white; }
+
 span {
   font-family: "Quicksand", Helvetica, Roboto, Arial, sans-serif; }
 
