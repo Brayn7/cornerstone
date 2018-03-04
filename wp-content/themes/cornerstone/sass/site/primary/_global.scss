@@ -46,6 +46,11 @@ input[type="submit"] {
     margin-top: 25px;
 }
 
+.blue-bg {
+    background: $cs-blue;
+    color: white;
+}
+
 span {
     font-family: $heading__font__family;
 }
