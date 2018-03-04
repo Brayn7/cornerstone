@@ -21,6 +21,7 @@
 
    .menu-item-has-children .sub-menu {
       height: 0;
+      overflow: hidden;
    }
    .menu-item-has-children:hover .sub-menu {
       height: 100%;

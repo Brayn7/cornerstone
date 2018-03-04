@@ -9817,7 +9817,8 @@ object {
     .site-header .menu-btn a[aria-expanded="true"] {
       color: #5d5d5d; }
   .site-header .menu-item-has-children .sub-menu {
-    height: 0; }
+    height: 0;
+    overflow: hidden; }
   .site-header .menu-item-has-children:hover .sub-menu {
     height: 100%;
     -webkit-transition: 1sec;
