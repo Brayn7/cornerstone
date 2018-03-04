@@ -17,6 +17,9 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
+		?>
+		<hr class="hide-for-small cell small-12">
+		<?php
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
