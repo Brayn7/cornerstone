@@ -103,8 +103,8 @@ $featured_stories = new WP_query(array(
            ?>
       <?php } else { ?>
 
-        <?php echo get_field('background_image', $section->ID) ? 'true' : 'false'; ?>
-        <div id="section-<?=$section_id;?>" class="grid-container full section" style='background-image: url("<?=get_field('background_image', $section->ID); ?>"); background-repeat: no-repeat;
+        <?php $bg = get_field('background_image', $section->ID) ? 'blue-bg' : ''; ?>
+        <div id="section-<?=$section_id;?>" class="grid-container full section <?= $bg ?>" style='background-image: url("<?=get_field('background_image', $section->ID); ?>"); background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
         background-attachment: fixed;
