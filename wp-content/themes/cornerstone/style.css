@@ -10107,7 +10107,9 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
     display: block;
     padding: 0;
     min-width: 0;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-bottom: 0;
+    height: 25px; }
     #content .missionary-single-content .media-links form input[type="submit"]:focus {
       outline: none; }
   @media screen and (max-width: 26.25em) {
