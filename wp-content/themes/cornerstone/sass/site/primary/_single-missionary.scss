@@ -37,6 +37,8 @@
         }
 
         form {
+            margin-bottom: 0;
+            height: 25px;
             input[type="submit"] {
                font-size: .95rem;
                 margin: 0;
@@ -46,8 +48,7 @@
                 padding: 0;
                 min-width: 0;
                 font-weight: 400;
-                margin-bottom: 0;
-                height: 25px;
+
                 &:focus {
                   outline: none;
                 }

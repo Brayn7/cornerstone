@@ -10099,19 +10099,20 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
       margin: 0 5px; }
     #content .missionary-single-content .media-links li:last-child:after {
       content: none; }
-  #content .missionary-single-content .media-links form input[type="submit"] {
-    font-size: .95rem;
-    margin: 0;
-    background: none;
-    color: #5d5d5d;
-    display: block;
-    padding: 0;
-    min-width: 0;
-    font-weight: 400;
+  #content .missionary-single-content .media-links form {
     margin-bottom: 0;
     height: 25px; }
-    #content .missionary-single-content .media-links form input[type="submit"]:focus {
-      outline: none; }
+    #content .missionary-single-content .media-links form input[type="submit"] {
+      font-size: .95rem;
+      margin: 0;
+      background: none;
+      color: #5d5d5d;
+      display: block;
+      padding: 0;
+      min-width: 0;
+      font-weight: 400; }
+      #content .missionary-single-content .media-links form input[type="submit"]:focus {
+        outline: none; }
   @media screen and (max-width: 26.25em) {
     #content .missionary-single-content .media-links li, #content .missionary-single-content .media-links form input {
       font-size: .8rem; } }
