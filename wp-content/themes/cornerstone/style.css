@@ -10079,9 +10079,9 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
   -webkit-background-size: cover;
           background-size: cover; }
 
-.missionary-single .section {
+#content .missionary-single .section {
   margin-bottom: 75px; }
-  .missionary-single .section:last-child {
+  #content .missionary-single .section:last-child {
     margin: 0; }
 
 .missionary-single-content {
