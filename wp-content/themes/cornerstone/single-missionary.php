@@ -99,7 +99,7 @@ get_header(); ?>
       </div>
       <?php } ?>
       <?php $gallery = acf_photo_gallery('photo_gallery', $current_id);?>
-      <?php if (count($gallery)) { ?>
+      <?php if (count($gallery) || !empty(get_field('video_playlist', $current_id))) { ?>
          <div class="section missionary-media cell small-12 text-center">
          <h1 class="text-left">Media</h1>
          <hr class="hide-for-small cell small-12">
@@ -119,6 +119,7 @@ get_header(); ?>
                      ?>
                   </div>
                <?php } ?>
+               <?php if (count($gallery)) { ?>
                <?php foreach ($gallery as $img) { ?>
                <?php 
                   $full_image_url= $img['full_image_url'];
@@ -131,6 +132,7 @@ get_header(); ?>
                      </a>
                      
                   </div>
+               <?php } ?>
                <?php } ?>
             </div>
          </div>
