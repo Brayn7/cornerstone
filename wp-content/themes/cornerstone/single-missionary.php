@@ -107,7 +107,15 @@ get_header(); ?>
                <?php if (!empty(get_field('video_playlist', $current_id))){ ?>
                   <div class="video-playlist cell small-12">
                      <?php 
-                        echo do_shortcode("'".get_field("video_playlist", $current_id)."'");
+                        if (shortcode_exists( get_field('video_playlist', $current_id) )){
+                           echo do_shortcode("'".get_field("video_playlist", $current_id)."'");
+                        } else {
+                           echo '<div class="video-wrapper">
+
+                                 '. get_field('video_playlist', $current_id) .'   
+
+                                 </div>';
+                        }
                      ?>
                   </div>
                <?php } ?>
