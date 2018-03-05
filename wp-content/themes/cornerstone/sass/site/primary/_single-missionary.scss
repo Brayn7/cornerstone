@@ -37,7 +37,7 @@
         }
 
         form {
-            input {
+            input[type="submit"] {
                font-size: .95rem;
                 margin: 0;
                 background: none;
@@ -64,7 +64,7 @@
             width: 100%;
         }
 
-        input {
+        input[type="submit"] {
             margin: 0;
             width: 100%;
             // text-transform: uppercase;

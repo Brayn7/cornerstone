@@ -10099,7 +10099,7 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
       margin: 0 5px; }
     .missionary-single-content .media-links li:last-child:after {
       content: none; }
-  .missionary-single-content .media-links form input {
+  .missionary-single-content .media-links form input[type="submit"] {
     font-size: .95rem;
     margin: 0;
     background: none;
@@ -10108,14 +10108,14 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
     padding: 0;
     min-width: 0;
     font-weight: 400; }
-    .missionary-single-content .media-links form input:focus {
+    .missionary-single-content .media-links form input[type="submit"]:focus {
       outline: none; }
   @media screen and (max-width: 26.25em) {
     .missionary-single-content .media-links li, .missionary-single-content .media-links form input {
       font-size: .8rem; } }
   .missionary-single-content .donate form {
     width: 100%; }
-  .missionary-single-content .donate input {
+  .missionary-single-content .donate input[type="submit"] {
     margin: 0;
     width: 100%;
     border-bottom-right-radius: 5px;
@@ -10123,7 +10123,7 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     border: 1px solid #0072C6; }
-    .missionary-single-content .donate input:focus {
+    .missionary-single-content .donate input[type="submit"]:focus {
       outline: none; }
 
 .missionary-blog-posts h2 {
