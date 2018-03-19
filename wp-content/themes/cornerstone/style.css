@@ -10003,7 +10003,8 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
           align-items: center; }
   .section-container .paypal_form select {
     height: 42px;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     padding-left: 10px; }
   .section-container .paypal_form .paypal_btn {
     border-radius: 0 !important;
