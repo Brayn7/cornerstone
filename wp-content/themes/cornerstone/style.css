@@ -10080,7 +10080,7 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
           background-size: cover; }
 
 .missionary-single .section {
-  margin-bottom: 50px; }
+  margin-bottom: 30px; }
   .missionary-single .section:last-child {
     margin: 0; }
 
@@ -10112,7 +10112,8 @@ div.elementor-wrapper.elementor-fit-aspect-ratio.elementor-open-inline, .video-w
       min-width: 0;
       font-weight: 400; }
       #content .missionary-single-content .media-links form input[type="submit"]:focus {
-        outline: none; }
+        outline: none;
+        border: none; }
   @media screen and (max-width: 26.25em) {
     #content .missionary-single-content .media-links li, #content .missionary-single-content .media-links form input {
       font-size: .8rem; } }

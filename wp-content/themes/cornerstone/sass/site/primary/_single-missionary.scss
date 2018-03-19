@@ -1,6 +1,6 @@
  .missionary-single {
     .section {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
 
         &:last-child {
             margin: 0;
@@ -51,6 +51,7 @@
 
                 &:focus {
                   outline: none;
+                  border: none;
                 }
             }
         }
